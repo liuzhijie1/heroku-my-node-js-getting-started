@@ -32,6 +32,9 @@ express()
   })
   .get('/cool', (req, res) => res.send(cool()))
   .get('/times', (req, res) => res.send(showTimes()))
+  .get('/jsontest', (req, res) => res.send({
+    test: '123'
+  }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 
