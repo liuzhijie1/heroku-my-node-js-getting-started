@@ -35,6 +35,9 @@ express()
   .get('/jsontest', (req, res) => res.send({
     test: '123'
   }))
+  .get('/new', (req, res) => {
+    res.send('123123')
+  })
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 
