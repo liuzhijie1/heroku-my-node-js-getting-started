@@ -16,13 +16,13 @@ const PORT = process.env.PORT || 5001
 
 const corsOptions = {
   origin: '*', // 设置允许的源
-  methods: ['GET', 'POST'], // 设置允许的请求方法
-  allowedHeaders: ['Content-Type', 'Authorization'], // 设置允许的请求头
+  methods: 'GET,POST,PUT,DELETE', // 设置允许的请求方法
+  allowedHeaders: '*', // 设置允许的请求头
 };
 
 express()
-  .use(express.static(path.join(__dirname, 'public')))
   .use(cors(corsOptions))
+  .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
