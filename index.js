@@ -41,6 +41,7 @@ express()
   .get('/cool', (req, res) => res.send(cool()))
   .get('/times', (req, res) => res.send(showTimes()))
   .get('/jsontest', (req, res) => res.send({
+    code: 200,
     "codes": {
       "oms/b2c/order/write": true,
       "oms/b2c/order/read": true,
