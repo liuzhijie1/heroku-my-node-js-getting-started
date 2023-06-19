@@ -41,7 +41,22 @@ express()
   .get('/cool', (req, res) => res.send(cool()))
   .get('/times', (req, res) => res.send(showTimes()))
   .get('/jsontest', (req, res) => res.send({
-    test: '123'
+    "codes": {
+      "oms/b2c/order/write": true,
+      "oms/b2c/order/read": true,
+      "oms/b2c/order/hold": true,
+      "oms/b2c/order/import": true,
+      "oms/b2b": true,
+      "ass/ticket/write": true,
+      "ass/ticket/delete": true,
+      "ass/ticket/read": true,
+      "pis/product/read": true,
+      "pis/product/write": false,
+      "fms": true,
+      "wf": true,
+      "pms": true,
+      "ims": true,
+    }
   }))
   .get('/new', (req, res) => {
     res.send('123123')
